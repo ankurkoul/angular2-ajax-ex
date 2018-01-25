@@ -1,0 +1,19 @@
+﻿<h1> {{ title }} </h1>
+    <h1 [textContent]="title"> </h1>
+    <img height="200" width="200" src="{{ imageUrl }}" />
+<img height="100" width="100" [src]="imageUrl" />
+<img height="200" width="200" bind-src="imageUrl" />
+<input type="button" 
+       class="btn btn-success"       
+       [class.active]="isActive"
+        value="Success Button" />
+
+<input type="button"      
+        [style.backgroundColor] ="isActive ? 'blue' : 'red'"
+       value="Styled Button" />
+
+<input type="button" 
+       id="targetButton" 
+       (click)="clickHandler($event)" 
+       class="btn btn-success"
+       value="Submit">
